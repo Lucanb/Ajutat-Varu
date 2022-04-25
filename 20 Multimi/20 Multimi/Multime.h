@@ -1,4 +1,7 @@
 #pragma once
+#include<iostream>
+#include<fstream>
+using namespace std;
 class Multime
 {
 public:
@@ -15,6 +18,8 @@ public:
 	bool operator <(const Multime&); //A<B -incluziunea;
 	bool operator ==(const Multime&);//verifica egalitatea;
 	void operator +=(int x);//Operator supraincarcare;
+	friend istream & operator>>(istream &is,Multime&);
+	friend ostream& operator<<(ostream& os, Multime&);
 	void Afisare();
 };
 
